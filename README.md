@@ -11,3 +11,12 @@ a simple and beautiful react native toasta simple and beautiful react native toa
  Usage
 </h3>
 <code>git clone https://github.com/ossvahid/react-native-simple-toast.git</code>
+<h5>
+ OR
+</h5>
+<p>
+download pakage link via this link 
+<a href="https://github.com/ossvahid/react-native-simple-toast/archive/refs/heads/main.zip" target="_blank">
+download
+</a>
+<p>
