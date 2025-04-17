@@ -15,7 +15,7 @@ a simple and beautiful react native toasta simple and beautiful react native toa
  OR
 </h5>
 <p>
-download pakage link via this link 
+download package link via this link 
 <a href="https://github.com/ossvahid/react-native-simple-toast/archive/refs/heads/main.zip" target="_blank">
 download
 </a>
