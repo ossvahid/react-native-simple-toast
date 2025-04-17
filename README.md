@@ -25,31 +25,3 @@ download
 <p>
 
 
-<code>export default function App() {
-  SplashScreen.hide();
-  return (
-    <ToastProvider>
-      <SettingsContextPrivider>
-        <UserContext>
-
-          <CacheProvider>
-            <NavigationContainer direction='rtl'>
-              <ThemeSettings.Provider value={settings}>
-
-                <SafeAreaView style={{ flex: 1, direction: 'rtl', backgroundColor: settings.app_background_color }}>
-                  <StatusBar style='auto' />
-                  <Navigations />
-                  <Toast />
-
-
-                </SafeAreaView>
-
-              </ThemeSettings.Provider>
-            </NavigationContainer>
-
-          </CacheProvider>
-        </UserContext>
-      </SettingsContextPrivider>
-    </ToastProvider>
-  );
-}</code>
