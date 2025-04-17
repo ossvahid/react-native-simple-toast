@@ -25,7 +25,9 @@ download
 <p>
 
 
-<code>export default function App() {
+<code>
+`
+export default function App() {
   SplashScreen.hide();
   return (
     <ToastProvider>
@@ -52,4 +54,6 @@ download
       </SettingsContextPrivider>
     </ToastProvider>
   );
-}</code>
+}
+`
+</code>
