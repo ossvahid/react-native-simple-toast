@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useRef, useEffect } from 'react';
-import { Animated, Image, StyleSheet, Text, View } from "react-native";
+import { Animated, Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 
 // usage ***
@@ -34,6 +34,9 @@ const SimpleToast = ({ options, show, onHide }) => {
   const text1 = options?.text1 ?? '';
   const text2 = options?.text2 ?? '';
 
+  const acceptButtonText = options?.acceptButtonText ?? '';
+  const rejectButtonText = options?.rejectButtonText ?? '';
+
 
 
   const animationSpeed = options?.animationSpeed ?? 500;
@@ -48,6 +51,8 @@ const SimpleToast = ({ options, show, onHide }) => {
 
     if (animationType !== 'fade') {
       toastAnim.setValue(transformYSize)
+    } else {
+      toastAnim.setValue(0)
     }
 
 
@@ -68,6 +73,7 @@ const SimpleToast = ({ options, show, onHide }) => {
         }).start(() => {
           onHide();
           setTimeout(() => {
+
             options.complete?.();
           }, 500);
         });
@@ -76,19 +82,40 @@ const SimpleToast = ({ options, show, onHide }) => {
   }
 
   function hideToast() {
-    Animated.timing(toastAnim, {
-      duration: animationSpeed,
-      toValue: animationType === 'fade' ? 0 : transformYSize,
-      useNativeDriver: true,
-    }).start(function () {
+ 
+    return new Promise((resolve) => {
+      Animated.timing(progressAnim, {
+        duration: animationSpeed,
+        toValue: 0,
+        useNativeDriver: false,
+      }).start(()=>{
+        Animated.timing(toastAnim, {
+          duration: animationSpeed,
+          toValue: animationType === 'fade' ? 0 : transformYSize,
+          useNativeDriver: true,
+        }).start(function () {
+          if (animationType === 'fade') {
+            toastAnim.setValue(0);
+          } else {
+            toastAnim.setValue(transformYSize);
+          }
+          progressAnim.setValue(109);
+  
+          resolve()
+        })
+      })
 
-      if (animationType === 'fade') {
-        toastAnim.setValue(0);
-      } else {
-        toastAnim.setValue(transformYSize);
-      }
-      progressAnim.setValue(109);
     })
+  }
+
+  const acceptStart = async () => {
+    await hideToast();
+
+    options.onAccept?.()
+  }
+  const rejectStart = async () => {
+    await hideToast();
+    options.onReject?.()
   }
 
   useEffect(() => {
@@ -155,15 +182,39 @@ const SimpleToast = ({ options, show, onHide }) => {
       ]}
     >
       <Image source={icon} style={{ width: 35, height: 35 }} />
-      <View style={{ position: 'static', width: '100%', flex: 1 }}>
-        <Text style={{ fontWeight: 900, fontSize: 15 }}>
-          {text1}
-        </Text>
-        {text2 !== '' ?
-          <Text style={{ fontSize: 12 }}>
-            {text2}
+      <View style={{ position: 'static', width: '100%', flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', rowGap: 7 }}>
+        <View>
+          <Text style={{ fontWeight: 900, fontSize: 15 }}>
+            {text1}
           </Text>
-          : ''}
+          {text2 !== '' ?
+            <Text style={{ fontSize: 12 }}>
+              {text2}
+            </Text>
+            : ''}
+        </View>
+        {acceptButtonText != '' || rejectButtonText != '' ?
+          <View style={{
+            flexDirection: 'row',
+            gap: 6
+          }}>
+
+            {acceptButtonText != '' ?
+              <Pressable onPress={acceptStart} style={styles.button}>
+                <Text>
+                  {acceptButtonText}
+                </Text>
+              </Pressable>
+              : null}
+            {rejectButtonText != '' ?
+              <Pressable onPress={rejectStart} style={styles.button}>
+                <Text>
+                  {rejectButtonText}
+                </Text>
+              </Pressable>
+              : null}
+          </View>
+          : null}
       </View>
       <Animated.View
         style={[
@@ -187,26 +238,25 @@ const SimpleToast = ({ options, show, onHide }) => {
 
 const ToastContext = createContext();
 
-export const ToastProvider = ({ children }) => {
+const ToastProvider = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [toastOptions, setToastOptions] = useState({});
 
-  const show = (options) => {
+  const toastshow = (options) => {
     if (isVisible === true) return;
     setToastOptions(options);
     setIsVisible(true);
   };
 
-  const hide = () => {
+  const toasthide = () => {
     setIsVisible(false);
   };
 
+
   return (
-    <ToastContext.Provider value={[show, hide]}>
+    <ToastContext.Provider value={[toastshow, toasthide]}>
       {children}
-
-      <SimpleToast options={toastOptions} show={isVisible} onHide={hide} />
-
+      <SimpleToast options={toastOptions} show={isVisible} onHide={toasthide} />
     </ToastContext.Provider>
   );
 };
@@ -233,11 +283,18 @@ const styles = StyleSheet.create({
     bottom: 0,
     end: 0,
     start: 0
+  },
+  button: {
+    padding: 4,
+    paddingHorizontal: 8,
+    borderRadius: 5,
+    backgroundColor: 'rgba(0,0,0,0.05)',
+    fontSize: 9
   }
 });
 
 
-export default SimpleToast;
+export default ToastProvider;
 export function useToast() {
   return useContext(ToastContext);
 }
