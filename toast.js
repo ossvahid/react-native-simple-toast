@@ -18,6 +18,8 @@ import { Animated, Image, Pressable, StyleSheet, Text, View } from "react-native
 
 
 const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
+  const [isActive,setActive] = useState(false);
+
   const toastPosition = options?.position ?? defaultOpts?.position ?? 'top';
   let transformYSize = toastPosition === 'top' ? -200 : 200;
   const animationType = options?.animationType ?? defaultOpts?.animationType ?? 'slide';
@@ -50,9 +52,8 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
 
 
 
-
   function showAndHideToast() {
-
+   
 
 
     if (animationType !== 'fade') {
@@ -78,9 +79,11 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
           useNativeDriver: true,
         }).start(() => {
           onHide();
+        
           setTimeout(() => {
-
+            setActive(false)
             options.complete?.();
+          
           }, 500);
         });
       });
@@ -126,8 +129,10 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
 
   useEffect(() => {
     if (show) {
+      setActive(true)
       showAndHideToast();
     } else {
+   
       hideToast()
     }
   }, [show]);
@@ -171,7 +176,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
       transform: [{ translateY: toastAnim }],
     };
   }
-
+  if(isActive === false) return;
   return (
     <Animated.View
       style={[
@@ -306,3 +311,4 @@ export default ToastProvider;
 export function useToast() {
   return useContext(ToastContext);
 }
+
