@@ -81,9 +81,9 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
           onHide();
         
           setTimeout(() => {
-            setActive(false)
+           
             options.complete?.();
-          
+            setActive(false)
           }, 500);
         });
       });
