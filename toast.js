@@ -17,29 +17,35 @@ import { Animated, Image, Pressable, StyleSheet, Text, View } from "react-native
 
 
 
-const SimpleToast = ({ options, show, onHide }) => {
-  const toastPosition = options?.position ?? 'top';
+const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
+  const toastPosition = options?.position ?? defaultOpts?.position ?? 'top';
   let transformYSize = toastPosition === 'top' ? -200 : 200;
-  const animationType = options?.animationType ?? 'fade';
+  const animationType = options?.animationType ?? defaultOpts?.animationType ?? 'slide';
   const progressAnim = useRef(new Animated.Value(109)).current;
   const toastAnim = useRef(new Animated.Value(animationType === 'fade' ? 0 : transformYSize)).current;
-  const progressTimer = options?.progressTimer ?? 3000;
-  const hideProgressBar = options?.hideProgressBar ?? false;
+  const progressTimer = options?.progressTimer ?? defaultOpts?.progressTimer ?? 3000;
+  const hideProgressBar = options?.hideProgressBar ?? defaultOpts?.hideProgressBar ?? false;
 
-  const type = options?.type ?? 'error';
-  const direction = options?.direction ?? 'ltr';
+  const hideImage = options?.hideImage ?? defaultOpts?.hideImage ?? false;
 
-  const customIcon = options?.customIcon ?? '';
-  const customColor = options?.customColor ?? '';
-  const text1 = options?.text1 ?? '';
-  const text2 = options?.text2 ?? '';
-
-  const acceptButtonText = options?.acceptButtonText ?? '';
-  const rejectButtonText = options?.rejectButtonText ?? '';
+  const imageSize = options?.imageSize ?? defaultOpts?.imageSize ?? 40;
 
 
 
-  const animationSpeed = options?.animationSpeed ?? 500;
+  const type = options?.type ?? defaultOpts?.type ?? 'error';
+  const direction = options?.direction ?? defaultOpts?.direction ?? 'ltr';
+
+  const customImage = options?.customImage ?? defaultOpts?.customImage ?? '';
+  const progressBarColor = options?.progressBarColor ?? defaultOpts?.progressBarColor ?? '';
+  const text1 = options?.text1 ?? defaultOpts?.text1 ?? '';
+  const text2 = options?.text2 ?? defaultOpts?.text2 ?? '';
+
+  const acceptButtonText = options?.acceptButtonText ?? defaultOpts?.acceptButtonText ?? '';
+  const rejectButtonText = options?.rejectButtonText ?? defaultOpts?.rejectButtonText ?? '';
+
+
+
+  const animationSpeed = options?.animationSpeed ?? defaultOpts?.animationSpeed ?? 500;
 
 
 
@@ -82,13 +88,13 @@ const SimpleToast = ({ options, show, onHide }) => {
   }
 
   function hideToast() {
- 
+
     return new Promise((resolve) => {
       Animated.timing(progressAnim, {
         duration: animationSpeed,
         toValue: 0,
         useNativeDriver: false,
-      }).start(()=>{
+      }).start(() => {
         Animated.timing(toastAnim, {
           duration: animationSpeed,
           toValue: animationType === 'fade' ? 0 : transformYSize,
@@ -100,7 +106,7 @@ const SimpleToast = ({ options, show, onHide }) => {
             toastAnim.setValue(transformYSize);
           }
           progressAnim.setValue(109);
-  
+
           resolve()
         })
       })
@@ -126,26 +132,26 @@ const SimpleToast = ({ options, show, onHide }) => {
     }
   }, [show]);
 
-  let color, icon, position = '';
+  let color, image, position = '';
   if (type === 'error') {
     color = '#FF3133';
-    icon = require('./images/error.png');
+    image = require('./images/error.png');
   } else if (type === 'warning') {
     color = '#C29541';
-    icon = require('./images/warning.png');
+    image = require('./images/warning.png');
   } else if (type === 'success') {
     color = '#4EE659';
-    icon = require('./images/success.png');
+    image = require('./images/success.png');
   } else if (type === 'info') {
     color = '#0C7AE4';
-    icon = require('./images/info.png');
+    image = require('./images/info.png');
   }
 
-  if (customColor !== '') {
-    color = customColor;
+  if (progressBarColor !== '') {
+    color = progressBarColor;
   }
-  if (customIcon !== '') {
-    icon = customIcon;
+  if (customImage !== '') {
+    image = customImage;
   }
 
   if (toastPosition === 'top') {
@@ -181,7 +187,9 @@ const SimpleToast = ({ options, show, onHide }) => {
         },
       ]}
     >
-      <Image source={icon} style={{ width: 35, height: 35 }} />
+      {hideImage === false ?
+        <Image source={image} style={{ width: imageSize, height: imageSize }} />
+        : null}
       <View style={{ position: 'static', width: '100%', flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', rowGap: 7 }}>
         <View>
           <Text style={{ fontWeight: 900, fontSize: 15 }}>
@@ -238,7 +246,7 @@ const SimpleToast = ({ options, show, onHide }) => {
 
 const ToastContext = createContext();
 
-const ToastProvider = ({ children }) => {
+const ToastProvider = ({ children, defaultOpts }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [toastOptions, setToastOptions] = useState({});
 
@@ -256,7 +264,7 @@ const ToastProvider = ({ children }) => {
   return (
     <ToastContext.Provider value={[toastshow, toasthide]}>
       {children}
-      <SimpleToast options={toastOptions} show={isVisible} onHide={toasthide} />
+      <SimpleToast options={toastOptions} defaultOpts={defaultOpts} show={isVisible} onHide={toasthide} />
     </ToastContext.Provider>
   );
 };
