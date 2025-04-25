@@ -13,7 +13,9 @@ a simple and beautiful react native toast
 <h3>
  Clone with Git
 </h3>
-<code>git clone https://github.com/ossvahid/react-native-simple-toast.git</code>
+```
+git clone https://github.com/ossvahid/react-native-simple-toast.git
+```
 <h3>
  OR
 </h3>
@@ -24,9 +26,9 @@ download
 </a>
 
 <h2>
- Step 1 : Inishize ToastProvider
+Step 1: Initialize ToastProvider
 </h2>
-then use <b style="color: red;">ToastProvider</b>
+<code>git clone https://github.com/ossvahid/react-native-simple-toast.git</code>
 
 
 
