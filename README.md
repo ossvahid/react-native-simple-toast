@@ -42,9 +42,13 @@ export default function App() {
 <h2>
 Step 2: Use useToast Function
 </h2>
-import useToast to your scrren then call it like this :
+import useToast to your screen then call it like this :
 
-
-
+```javascript
+import { useToast } from "../packages/react-native-simple-toast/toast";
+export default function AboutUs() {
+    const [toastshow, toasthide] = useToast();
+}
+```
 
 
