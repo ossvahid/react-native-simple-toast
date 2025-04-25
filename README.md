@@ -230,5 +230,37 @@ Available Options
       toast second text
      </td>
    </tr>
+    <!-- item -->
+  <tr>
+  <td>
+     acceptButtonText
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     accept
+     </td>
+      <td>
+      toast accept button text
+     </td>
+   </tr>
+  <!-- item -->
+  <tr>
+  <td>
+     rejectButtonText
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     reject
+     </td>
+      <td>
+      toast reject button text
+     </td>
+   </tr>
+
+   
  </tbody>
 </table>
