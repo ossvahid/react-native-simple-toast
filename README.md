@@ -39,6 +39,10 @@ export default function App() {
    </ToastProvider>
 }
 ```
+<h2>
+Step 2: Use useToast Function
+</h2>
+import useToast to your scrren then call it like this :
 
 
 
