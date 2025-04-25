@@ -34,7 +34,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
 
 
 
-  const type = options?.type ?? defaultOpts?.type ?? 'error';
+  const type = options?.type ?? defaultOpts?.type ?? 'info';
   const direction = options?.direction ?? defaultOpts?.direction ?? 'ltr';
 
   const customImage = options?.customImage ?? defaultOpts?.customImage ?? '';

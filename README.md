@@ -84,6 +84,15 @@ Available Options
   <td>
      type
      </td>
+       <td>
+     string
+     </td>
+      <td>
+     info
+     </td>
+      <td>
+     a toast has four types : info/success/error/warning
+     </td>
    </tr>
  </tbody>
 </table>
