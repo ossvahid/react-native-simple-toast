@@ -66,16 +66,16 @@ Available Options
  <thead>
  <tr>
       <td>
-     option name
+      name
      </td>
          <td>
-     option type
+      type
      </td>
        <td>
-     option default value
+      default value
      </td>
      <td>
-     option description
+      description
      </td>
  </tr>
  </thead>
