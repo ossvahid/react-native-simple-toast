@@ -57,7 +57,15 @@ export default function AboutUs() {
     }, [])
 }
 ```
-<mark>
 toast will work nice for you if followed top steps
-</mark>
 
+
+<table>
+ <thead>
+ <tr>
+ <td>
+ test
+ </td>
+ </tr>
+ </thead>
+</table>
