@@ -26,7 +26,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
   const progressAnim = useRef(new Animated.Value(109)).current;
   const toastAnim = useRef(new Animated.Value(animationType === 'fade' ? 0 : transformYSize)).current;
   const progressTimer = options?.progressTimer ?? defaultOpts?.progressTimer ?? 3000; // added
-  const hideProgressBar = options?.hideProgressBar ?? defaultOpts?.hideProgressBar ?? false;
+  const hideProgressBar = options?.hideProgressBar ?? defaultOpts?.hideProgressBar ?? false;  // added
 
   const hideImage = options?.hideImage ?? defaultOpts?.hideImage ?? false;
 
@@ -38,7 +38,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
   const direction = options?.direction ?? defaultOpts?.direction ?? 'ltr'; // added
 
   const customImage = options?.customImage ?? defaultOpts?.customImage ?? '';
-  const progressBarColor = options?.progressBarColor ?? defaultOpts?.progressBarColor ?? '';
+  const progressBarColor = options?.progressBarColor ?? defaultOpts?.progressBarColor ?? '';  // added
   const text1 = options?.text1 ?? defaultOpts?.text1 ?? '';
   const text2 = options?.text2 ?? defaultOpts?.text2 ?? '';
 

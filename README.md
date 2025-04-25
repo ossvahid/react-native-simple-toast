@@ -155,6 +155,36 @@ Available Options
       toast animation speed to show and hide
      </td>
    </tr>
+     <!-- item -->
+  <tr>
+  <td>
+     hideProgressBar
+     </td>
+       <td>
+     bool
+     </td>
+      <td>
+     false
+     </td>
+      <td>
+      if set true toast progress bar will not shown
+     </td>
+   </tr>
+     <!-- item -->
+  <tr>
+  <td>
+     progressBarColor
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     
+     </td>
+      <td>
+      this is progress bar color , like : red or #000000 or ...
+     </td>
+   </tr>
    <!-- item -->
   <tr>
   <td>
