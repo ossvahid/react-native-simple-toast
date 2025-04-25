@@ -239,10 +239,10 @@ Available Options
      string
      </td>
       <td>
-     accept
+     empty
      </td>
       <td>
-      toast accept button text
+      toast accept button text . if set a value then showen a accept button in the toast
      </td>
    </tr>
   <!-- item -->
@@ -254,10 +254,10 @@ Available Options
      string
      </td>
       <td>
-     reject
+     empty
      </td>
       <td>
-      toast reject button text
+      toast reject button text . if set a value then showen a reject button in the toast
      </td>
    </tr>
 
