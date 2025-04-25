@@ -412,7 +412,6 @@ Toast in Toast
         })
 ````
 
-
 <h4>
 Use toasthide func to hide the current toast
 </h4>
@@ -432,3 +431,9 @@ setTimeout(() => {
 }, 1500);
     }, [])
 ````
+
+<h4>
+Default Global Option
+</h4>
+
+if you want set some default options in the all toasts then you need : 
