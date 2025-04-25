@@ -411,3 +411,24 @@ Toast in Toast
                 },
         })
 ````
+
+
+<h4>
+Use toasthide func to hide the current toast
+</h4>
+
+````js
+    useEffect(() => {
+        toastshow({
+            type: 'success',
+            text1: 'the product added to your cart',
+            text2: 'note see your cart for list',
+            animationSpeed: 100,
+            progressTimer: 99999
+        })
+
+setTimeout(() => {
+     toasthide();
+}, 1500);
+    }, [])
+````
