@@ -272,7 +272,7 @@ Available Options
      empty
      </td>
       <td> 
-      add a custom image in toast instead of default image : <a href="#customImage">info</a>
+      add a custom image in toast instead of default image : <a href="#customImage">details</a>
      </td>
    </tr>
      <!-- item -->
