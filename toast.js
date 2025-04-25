@@ -2,17 +2,6 @@ import React, { createContext, useState, useContext, useRef, useEffect } from 'r
 import { Animated, Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 
-// usage ***
-
-// import { ToastContext } from "../packages/react-native-simple-toast/toast";
-
-// const { show, hide } = useContext(ToastContext);
-//     show({
-//         type: 'info',
-//         progressTimer: 5000,
-//         hideProgressBar: false,
-//         position: 'top',
-//       })
 
 
 
