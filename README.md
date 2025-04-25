@@ -445,7 +445,7 @@ export default function App() {
    <ToastProvider defaultOpts={{
       hideProgressBar: true,
       animationType: 'fade',
-      hideImage: false,
+      direction: 'rtl',
       position: 'bottom',
       type: 'error'
     }}>
