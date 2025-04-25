@@ -433,7 +433,7 @@ setTimeout(() => {
 ````
 
 <h4>
-Default Global Option
+Default Global Options
 </h4>
 
 if you want set some default options in the all toasts then you need : 
