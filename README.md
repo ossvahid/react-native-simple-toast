@@ -5,7 +5,7 @@ a simple and beautiful react native toast for (Android And IOS)
  Preview
 </h2>
 
-<img width="150px" style="border-radius: 15px;" loading="lazy" src="./images/preview.gif">
+<img width="150px" src="./images/preview.gif">
 
 <h2>
  Usage
