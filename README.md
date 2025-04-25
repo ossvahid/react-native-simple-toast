@@ -29,7 +29,16 @@ download
 <h2>
 Step 1: Initialize ToastProvider
 </h2>
-<code>git clone https://github.com/ossvahid/react-native-simple-toast.git</code>
+Wrap your app content in App.js with ToastProvider
+
+```javascript
+import ToastProvider from './packages/react-native-simple-toast/toast';
+export default function App() {
+   <ToastProvider>
+    // your other components
+   </ToastProvider>
+}
+```
 
 
 
