@@ -80,6 +80,22 @@ Available Options
  </tr>
  </thead>
  <tbody>
+ <!-- item -->
+  <tr>
+  <td>
+     type
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     info
+     </td>
+      <td>
+     a toast has four types : info/success/error/warning
+     </td>
+   </tr>
+    <!-- item -->
   <tr>
   <td>
      type
