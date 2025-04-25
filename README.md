@@ -271,8 +271,8 @@ Available Options
       <td>
      empty
      </td>
-      <td>
-      add a custom image in toast instead of default image
+      <td> 
+      add a custom image in toast instead of default image : <a href="#customImage">example</a>
      </td>
    </tr>
      <!-- item -->
