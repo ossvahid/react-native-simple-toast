@@ -30,14 +30,14 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
 
   const hideImage = options?.hideImage ?? defaultOpts?.hideImage ?? false;
 
-  const imageSize = options?.imageSize ?? defaultOpts?.imageSize ?? 40;
-
+  const imageSize = options?.imageSize ?? defaultOpts?.imageSize ?? 40; // added
+  const customImage = options?.customImage ?? defaultOpts?.customImage ?? ''; // added
 
 
   const type = options?.type ?? defaultOpts?.type ?? 'info'; // added
   const direction = options?.direction ?? defaultOpts?.direction ?? 'ltr'; // added
 
-  const customImage = options?.customImage ?? defaultOpts?.customImage ?? '';
+
   const progressBarColor = options?.progressBarColor ?? defaultOpts?.progressBarColor ?? '';  // added
   const text1 = options?.text1 ?? defaultOpts?.text1 ?? ''; // added
   const text2 = options?.text2 ?? defaultOpts?.text2 ?? ''; // added

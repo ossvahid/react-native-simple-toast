@@ -260,7 +260,50 @@ Available Options
       toast reject button text . if set a value then showen a reject button in the toast
      </td>
    </tr>
-
-   
+  <!-- item -->
+  <tr>
+  <td>
+     customImage
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     empty
+     </td>
+      <td>
+      add a custom image in toast instead of default image
+     </td>
+   </tr>
+     <!-- item -->
+  <tr>
+  <td>
+     customImage
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     empty
+     </td>
+      <td>
+      add a custom image in toast instead of default image
+     </td>
+   </tr>
+    <!-- item -->
+  <tr>
+  <td>
+     imageSize
+     </td>
+       <td>
+     number
+     </td>
+      <td>
+     40
+     </td>
+      <td>
+       image size
+     </td>
+   </tr>
  </tbody>
 </table>
