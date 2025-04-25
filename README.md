@@ -377,7 +377,7 @@ customImage
 ````
 
 <h4>
-Some Examples
+Toast in Toast
 </h4>
 
 ````js
