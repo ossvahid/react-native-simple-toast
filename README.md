@@ -16,6 +16,14 @@ a simple and beautiful react native toast
 ```bash
 git clone https://github.com/ossvahid/react-native-simple-toast.git
 ```
+
+
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
 <h3>
  OR
 </h3>
