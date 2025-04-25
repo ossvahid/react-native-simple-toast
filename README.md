@@ -14,7 +14,7 @@ a simple and beautiful react native toast
  Clone with Git
 </h3>
 
-```typescript
+```
 git clone https://github.com/ossvahid/react-native-simple-toast.git
 ```
 <h3>
