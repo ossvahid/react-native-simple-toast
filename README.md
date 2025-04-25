@@ -361,12 +361,17 @@ customImage
 ```js
    toastshow({
        type: 'success',
-       text1: 'the product added to your cart',
-       text2: 'note see your cart for list',
-       hideProgressBar: false,
-       animationSpeed: 500,
+       text1: '...',
+       text2: '...',
        customImage: {
            uri: 'https://vectorflags.s3.amazonaws.com/flags/ru-sphere-01.png'
        },
+   })
+// OR 
+    toastshow({
+       type: 'success',
+       text1: '...',
+       text2: '...',
+      customImage: require("../assets/imgs/fail-payment.png")
    })
 ````
