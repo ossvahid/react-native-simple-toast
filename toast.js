@@ -193,7 +193,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
       ]}
     >
       {hideImage === false ?
-        <Image source={image} style={{ width: imageSize, height: imageSize }} />
+        <Image source={image} style={{ width: imageSize, height: imageSize,resizeMode: 'contain' }} />
         : null}
       <View style={{ position: 'static', width: '100%', flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', rowGap: 7 }}>
         <View>
