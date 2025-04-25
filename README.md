@@ -7,16 +7,16 @@ a simple and beautiful react native toast
 <p>
 <img src="./images/success.png">
 <p>
-<h3>
+<h2>
  Usage
-</h3>
-<h4>
+</h2>
+<h3>
  Clone with Git
-</h4>
+</h3>
 <code>git clone https://github.com/ossvahid/react-native-simple-toast.git</code>
-<h4>
+<h3>
  OR
-</h4>
+</h3>
 <p>
 download package link via this link 
 <a href="https://github.com/ossvahid/react-native-simple-toast/archive/refs/heads/main.zip" target="_blank">
