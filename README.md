@@ -320,5 +320,35 @@ Available Options
       when toast progress is completed and toast was hidden this callback will fired : note (if use this callback don't use rejectButtonText and acceptButtonText)
      </td>
    </tr>
+    <!-- item -->
+  <tr>
+  <td>
+     onAccept
+     </td>
+       <td>
+     callback
+     </td>
+      <td>
+     ...
+     </td>
+      <td>
+      when client clicked accept button this callback will fired
+     </td>
+   </tr>
+    <!-- item -->
+  <tr>
+  <td>
+     onReject
+     </td>
+       <td>
+     callback
+     </td>
+      <td>
+     ...
+     </td>
+      <td>
+      when client clicked reject button this callback will fired
+     </td>
+   </tr>
  </tbody>
 </table>
