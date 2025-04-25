@@ -13,16 +13,9 @@ a simple and beautiful react native toast
 <h3>
  Clone with Git
 </h3>
-```
-git clone https://github.com/ossvahid/react-native-simple-toast.git
-```
-
-
 
 ```typescript
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+git clone https://github.com/ossvahid/react-native-simple-toast.git
 ```
 <h3>
  OR
