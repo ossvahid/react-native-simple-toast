@@ -24,7 +24,7 @@ download
 </a>
 <p>
 
-then use 
+then use <b style="color: red;">ToastProvider</b>
 
 
 
