@@ -398,8 +398,15 @@ Some Examples
                         type: 'success',
                         text1: 'the product added to your cart',
                         text2: 'note see your cart for list',
-                        hideProgressBar: false,
-                        animationSpeed: 500,
+                        animationSpeed: 1500,
+                    })
+                },
+                onReject: () => {
+                    toastshow({
+                        type: 'warning',
+                        text1: 'the product added to your cart',
+                        text2: 'note see your cart for list',
+                        animationSpeed: 1500,
                     })
                 },
         })
