@@ -48,6 +48,13 @@ import useToast to your screen then call it like this :
 import { useToast } from "../packages/react-native-simple-toast/toast";
 export default function AboutUs() {
     const [toastshow, toasthide] = useToast();
+    useEffect(() => {
+        toastshow({
+            type: 'success',
+            text1: 'this success toast',
+            text2: 'some text'
+        })
+    }, [])
 }
 ```
 
