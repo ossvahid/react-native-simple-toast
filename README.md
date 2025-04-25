@@ -1,5 +1,5 @@
 # react-native-simple-toast
-a simple and beautiful react native toast for (((Android And IOS)))
+a simple and beautiful react native toast for (Android And IOS)
 
 <h2>
  Preview
