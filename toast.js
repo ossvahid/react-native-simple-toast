@@ -25,7 +25,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
   const animationType = options?.animationType ?? defaultOpts?.animationType ?? 'slide'; // added
   const progressAnim = useRef(new Animated.Value(109)).current;
   const toastAnim = useRef(new Animated.Value(animationType === 'fade' ? 0 : transformYSize)).current;
-  const progressTimer = options?.progressTimer ?? defaultOpts?.progressTimer ?? 3000;
+  const progressTimer = options?.progressTimer ?? defaultOpts?.progressTimer ?? 3000; // added
   const hideProgressBar = options?.hideProgressBar ?? defaultOpts?.hideProgressBar ?? false;
 
   const hideImage = options?.hideImage ?? defaultOpts?.hideImage ?? false;
@@ -47,7 +47,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
 
 
 
-  const animationSpeed = options?.animationSpeed ?? defaultOpts?.animationSpeed ?? 500;
+  const animationSpeed = options?.animationSpeed ?? defaultOpts?.animationSpeed ?? 500; // added
 
 
 

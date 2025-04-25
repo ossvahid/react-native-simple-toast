@@ -140,5 +140,35 @@ Available Options
       toast animation type : slide | fade
      </td>
    </tr>
+ <!-- item -->
+  <tr>
+  <td>
+     animationSpeed
+     </td>
+       <td>
+     number
+     </td>
+      <td>
+     500
+     </td>
+      <td>
+      toast animation speed to show and hide
+     </td>
+   </tr>
+   <!-- item -->
+  <tr>
+  <td>
+     progressTimer
+     </td>
+       <td>
+     number
+     </td>
+      <td>
+     3000
+     </td>
+      <td>
+      after end time the toast will hide
+     </td>
+   </tr>
  </tbody>
 </table>
