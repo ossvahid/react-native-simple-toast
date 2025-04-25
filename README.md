@@ -454,8 +454,6 @@ export default function App() {
 }
 ````
 
-<h5>
-don't forget star and fork if you like this.
-<br>
-good luck
-</h5>
+<p>
+don't forget star and fork if you like this. good luck
+</p>
