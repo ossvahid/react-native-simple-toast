@@ -28,7 +28,7 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
   const progressTimer = options?.progressTimer ?? defaultOpts?.progressTimer ?? 3000; // added
   const hideProgressBar = options?.hideProgressBar ?? defaultOpts?.hideProgressBar ?? false;  // added
 
-  const hideImage = options?.hideImage ?? defaultOpts?.hideImage ?? false;
+  const hideImage = options?.hideImage ?? defaultOpts?.hideImage ?? false; // added
 
   const imageSize = options?.imageSize ?? defaultOpts?.imageSize ?? 40; // added
   const customImage = options?.customImage ?? defaultOpts?.customImage ?? ''; // added

@@ -278,21 +278,6 @@ Available Options
      <!-- item -->
   <tr>
   <td>
-     customImage
-     </td>
-       <td>
-     string
-     </td>
-      <td>
-     empty
-     </td>
-      <td>
-      add a custom image in toast instead of default image
-     </td>
-   </tr>
-    <!-- item -->
-  <tr>
-  <td>
      imageSize
      </td>
        <td>
@@ -303,6 +288,36 @@ Available Options
      </td>
       <td>
        image size
+     </td>
+   </tr>
+     <!-- item -->
+  <tr>
+  <td>
+     hideImage
+     </td>
+       <td>
+     bool
+     </td>
+      <td>
+     false
+     </td>
+      <td>
+      if set true . toast image will be hidden
+     </td>
+   </tr>
+   <!-- item -->
+  <tr>
+  <td>
+     completed
+     </td>
+       <td>
+     callback
+     </td>
+      <td>
+     ...
+     </td>
+      <td>
+      when toast progress is completed and toast was hidden this callback will fired : note (if use this callback don't use rejectButtonText and acceptButtonText)
      </td>
    </tr>
  </tbody>
