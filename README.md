@@ -110,5 +110,35 @@ Available Options
       toast direction : rtl | ltr
      </td>
    </tr>
+     <!-- item -->
+  <tr>
+  <td>
+     position
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     top
+     </td>
+      <td>
+      toast position : top | bottom
+     </td>
+   </tr>
+    <!-- item -->
+  <tr>
+  <td>
+     animationType
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     slide
+     </td>
+      <td>
+      toast animation type : slide | fade
+     </td>
+   </tr>
  </tbody>
 </table>

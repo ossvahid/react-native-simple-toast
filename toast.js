@@ -20,9 +20,9 @@ import { Animated, Image, Pressable, StyleSheet, Text, View } from "react-native
 const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
   const [isActive,setActive] = useState(false);
 
-  const toastPosition = options?.position ?? defaultOpts?.position ?? 'top';
+  const toastPosition = options?.position ?? defaultOpts?.position ?? 'top';  // added
   let transformYSize = toastPosition === 'top' ? -200 : 200;
-  const animationType = options?.animationType ?? defaultOpts?.animationType ?? 'slide';
+  const animationType = options?.animationType ?? defaultOpts?.animationType ?? 'slide'; // added
   const progressAnim = useRef(new Animated.Value(109)).current;
   const toastAnim = useRef(new Animated.Value(animationType === 'fade' ? 0 : transformYSize)).current;
   const progressTimer = options?.progressTimer ?? defaultOpts?.progressTimer ?? 3000;
