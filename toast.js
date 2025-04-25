@@ -34,8 +34,8 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
 
 
 
-  const type = options?.type ?? defaultOpts?.type ?? 'info';
-  const direction = options?.direction ?? defaultOpts?.direction ?? 'ltr';
+  const type = options?.type ?? defaultOpts?.type ?? 'info'; // added
+  const direction = options?.direction ?? defaultOpts?.direction ?? 'ltr'; // added
 
   const customImage = options?.customImage ?? defaultOpts?.customImage ?? '';
   const progressBarColor = options?.progressBarColor ?? defaultOpts?.progressBarColor ?? '';

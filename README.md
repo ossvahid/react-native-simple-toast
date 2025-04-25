@@ -92,22 +92,22 @@ Available Options
      info
      </td>
       <td>
-     a toast has four types : info/success/error/warning
+     a toast has four types : info|success|error|warning
      </td>
    </tr>
     <!-- item -->
   <tr>
   <td>
-     type
+     direction
      </td>
        <td>
      string
      </td>
       <td>
-     info
+     ltr
      </td>
       <td>
-     a toast has four types : info/success/error/warning
+      toast direction : rtl|ltr
      </td>
    </tr>
  </tbody>
