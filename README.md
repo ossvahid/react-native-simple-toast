@@ -381,74 +381,26 @@ Some Examples
 </h4>
 
 ````js
-toastshow({
-                                                    type: 'warning',
-                                                    text1: 'the product added to your cart',
-                                                    text2: 'note see your cart for list',
-                                                    progressBarColor: '#0d43ab',
-                                                    acceptButtonText: 'Accept',
-                                                    rejectButtonText: 'Reject',
-                                                    animationSpeed: 500,
-                                                    animationSpeed: 500,
-                                                    customImage: {
-                                                        uri: 'https://vectorflags.s3.amazonaws.com/flags/ru-sphere-01.png'
-                                                    },
-                                                    onAccept: () => {
-                                                        toastshow({
-                                                            type: 'success',
-                                                            text1: 'the product added to your cart',
-                                                            text2: 'note see your cart for list',
-                                                            hideProgressBar: false,
-                                                            animationSpeed: 500,
-                                                        })
-                                                    },
-                                                    onReject: () => {
-                                                        toastshow({
-                                                            type: 'warning',
-                                                            text1: 'the product addedadded to your cart to your cart',
-                                                            text2: 'note see your cart for list',
-                                                            animationType: 'slide',
-                                                            position: 'top',
-                                                            animationSpeed: 500,
-                                                            acceptButtonText: 'Accept',
-                                                            rejectButtonText: 'Reject',
-                                                            imageSize: 90,
-                                                        
-                                                            onAccept: () => {
-                                                                toastshow({
-                                                                    type: 'info',
-                                                                    text1: 'the product added to your cart',
-                                                                    text2: 'note see your cart for list',
-                                                                    animationType: 'slide',
-                                                                    position: 'top',
-                                                                    animationSpeed: 500,
-                                                                    acceptButtonText: 'Accept',
-                                                                    onAccept: () => {
-                                                                        toastshow({
-                                                                            type: 'error',
-                                                                            text1: 'the product added to your cart',
-                                                                            text2: 'note see your cart for list',
-                                                                            animationType: 'slide',
-                                                                            position: 'top',
-                                                                            animationSpeed: 500,
-                                                                            acceptButtonText: 'Accept',
-                                                                            onAccept: () => {
-
-                                                                                toastshow({
-                                                                                    type: 'success',
-                                                                                    text1: 'the product added to your cart',
-                                                                                    text2: 'note see your cart for list',
-                                                                                    animationType: 'slide',
-                                                                                    position: 'top',
-                                                                                    animationSpeed: 500,
-                                                                                })
-                                                                            }
-                                                                        })
-                                                                    }
-                                                                })
-                                                            },
-                                                        })
-                                                    },
-                                                })
-
+  toastshow({
+         type: 'warning',
+         text1: 'the product added to your cart',
+         text2: 'note see your cart for list',
+         progressBarColor: '#0d43ab',
+         acceptButtonText: 'Accept',
+         rejectButtonText: 'Reject',
+         animationSpeed: 500,
+         animationSpeed: 500,
+         customImage: {
+             uri: 'https://vectorflags.s3.amazonaws.com/flags/ru-sphere-01.png'
+         },
+          onAccept: () => {
+                    toastshow({
+                        type: 'success',
+                        text1: 'the product added to your cart',
+                        text2: 'note see your cart for list',
+                        hideProgressBar: false,
+                        animationSpeed: 500,
+                    })
+                },
+        })
 ````
