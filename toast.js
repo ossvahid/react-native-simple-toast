@@ -39,8 +39,8 @@ const SimpleToast = ({ options, show, onHide, defaultOpts }) => {
 
   const customImage = options?.customImage ?? defaultOpts?.customImage ?? '';
   const progressBarColor = options?.progressBarColor ?? defaultOpts?.progressBarColor ?? '';  // added
-  const text1 = options?.text1 ?? defaultOpts?.text1 ?? '';
-  const text2 = options?.text2 ?? defaultOpts?.text2 ?? '';
+  const text1 = options?.text1 ?? defaultOpts?.text1 ?? ''; // added
+  const text2 = options?.text2 ?? defaultOpts?.text2 ?? ''; // added
 
   const acceptButtonText = options?.acceptButtonText ?? defaultOpts?.acceptButtonText ?? '';
   const rejectButtonText = options?.rejectButtonText ?? defaultOpts?.rejectButtonText ?? '';

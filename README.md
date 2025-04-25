@@ -200,5 +200,35 @@ Available Options
       after end time the toast will hide
      </td>
    </tr>
+ <!-- item -->
+  <tr>
+  <td>
+     text1
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     empty
+     </td>
+      <td>
+      toast first text
+     </td>
+   </tr>
+    <!-- item -->
+  <tr>
+  <td>
+     text2
+     </td>
+       <td>
+     string
+     </td>
+      <td>
+     empty
+     </td>
+      <td>
+      toast second text
+     </td>
+   </tr>
  </tbody>
 </table>
