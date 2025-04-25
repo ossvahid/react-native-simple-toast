@@ -13,7 +13,7 @@ a simple and beautiful react native toast
 <h3>
  Clone with Git
 </h3>
-```
+```php
 git clone https://github.com/ossvahid/react-native-simple-toast.git
 ```
 <h3>
