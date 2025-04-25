@@ -39,6 +39,7 @@ export default function App() {
    </ToastProvider>
 }
 ```
+Note: Use ToastProvider at the top level of other components.
 <h2>
 Step 2: Use useToast Function
 </h2>
