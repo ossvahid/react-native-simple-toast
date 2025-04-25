@@ -5,7 +5,7 @@ a simple and beautiful react native toast for (Android And IOS)
  Preview
 </h2>
 
-<img src="./images/success.png">
+<img src="./images/preview.gif">
 
 <h2>
  Usage
