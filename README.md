@@ -60,7 +60,7 @@ export default function AboutUs() {
 toast will work nice for you if followed top steps
 
 
-<table>
+<table style="width: 100%">
  <thead>
  <tr>
  <td>
