@@ -437,3 +437,19 @@ Default Global Option
 </h4>
 
 if you want set some default options in the all toasts then you need : 
+
+
+````javascript
+import ToastProvider from './packages/react-native-simple-toast/toast';
+export default function App() {
+   <ToastProvider defaultOpts={{
+      hideProgressBar: true,
+      animationType: 'fade',
+      hideImage: false,
+      position: 'bottom',
+      type: 'error'
+    }}>
+    // your other components
+   </ToastProvider>
+}
+````
