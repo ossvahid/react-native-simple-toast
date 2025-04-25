@@ -66,8 +66,24 @@ Available Options
  <thead>
  <tr>
       <td>
-     option
+     option name
+     </td>
+         <td>
+     option type
+     </td>
+       <td>
+     option default value
+     </td>
+     <td>
+     option description
      </td>
  </tr>
  </thead>
+ <tbody>
+  <tr>
+  <td>
+     type
+     </td>
+   </tr>
+ </tbody>
 </table>
