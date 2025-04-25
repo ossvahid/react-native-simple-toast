@@ -59,13 +59,15 @@ export default function AboutUs() {
 ```
 toast will work nice for you if followed top steps
 
-
-<table style="width: 100%">
+<h3>
+Available Options
+</h3>
+<table>
  <thead>
  <tr>
- <td>
- test
- </td>
+      <td>
+     option
+     </td>
  </tr>
  </thead>
 </table>
