@@ -179,7 +179,7 @@ Available Options
      string
      </td>
       <td>
-     
+     empty
      </td>
       <td>
       this is progress bar color , like : red or #000000 or ...
