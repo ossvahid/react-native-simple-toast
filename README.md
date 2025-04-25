@@ -5,7 +5,7 @@ a simple and beautiful react native toast
  Preview
 </h2>
 <p>
-a simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toasta simple and beautiful react native toast
+<img src="./images/success.png">
 <p>
 <h3>
  Usage
